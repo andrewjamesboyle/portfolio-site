@@ -62,9 +62,9 @@ export default function About() {
               <p>
                 I’ve always loved building things. When I was a kid, I would
                 build elaborate systems of pillows and capsized laundry hampers
-                to play drums on. I would take my bike apart just to see if I //
-                eslint-disable-next-line react/no-unescaped-entities could put
-                it back together. At first I couldn't, but eventually I could.
+                to play drums on. I would take my bike apart just to see if I
+                could put it back together. At first I couldn’t, but eventually
+                I could.
               </p>
               <p>
                 I spent most of my twenties touring internationally and

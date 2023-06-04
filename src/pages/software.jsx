@@ -12,38 +12,36 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 const projects = [
   {
     name: 'Collabo',
-    description:
-      'Creating technology to empower civilians to explore space on their own terms.',
-    link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
+    description: 'GitHub for musicians. Built with HTML, CSS, and vanilla JS.',
+    link: { href: 'http://collabomusic.co', label: 'collabomusic.co' },
     logo: logoPlanetaria,
   },
   {
-    name: 'Animaginary',
+    name: 'BikeBuddy',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoAnimaginary,
+      'A ChatGPT powered digital marketing assistant trained specifically on the mountain biking industry. Built for Mountain View Cycles as a marketing automation tool. Built with React, Node, GraphQL, and RedwoodJS.',
+    link: {
+      href: 'https://github.com/contentgpt/marketing-app-backend',
+      label: 'github.com',
+    },
+    logo: logoPlanetaria,
   },
   {
-    name: 'HelioStream',
+    name: 'Gimbal Simulator',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoHelioStream,
+      'A testing program built for Hood Tech Vision. The goal was to use Flight Simulator telemetry data to update the gimbal position at a rate of 33Hz. Built using C#, .NET, and WPF.',
+    link: { href: 'https://hoodtechvision.com/', label: 'hoodtechvision.com' },
+    logo: logoPlanetaria,
   },
   {
-    name: 'cosmOS',
+    name: 'Tic Tac Toe AI',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoCosmos,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoOpenShuttle,
+      'A brief foray into adversarial search algorithm, minimax, which simulates intelligent play against the computer.',
+    link: {
+      href: 'https://github.com/andrewjamesboyle/tictactoe-ai',
+      label: 'github.com',
+    },
+    logo: logoPlanetaria,
   },
 ]
 
