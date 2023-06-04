@@ -11,7 +11,7 @@ import logoPlanetaria from '@/images/logos/planetaria.svg'
 
 const projects = [
   {
-    name: 'Planetaria',
+    name: 'Collabo',
     description:
       'Creating technology to empower civilians to explore space on their own terms.',
     link: { href: 'http://planetaria.tech', label: 'planetaria.tech' },
@@ -58,19 +58,16 @@ function LinkIcon(props) {
   )
 }
 
-export default function Projects() {
+export default function Software() {
   return (
     <>
       <Head>
-        <title>Projects - Spencer Sharp</title>
-        <meta
-          name="description"
-          content="Things I’ve made trying to put my dent in the universe."
-        />
+        <title>Software - Andrew Boyle</title>
+        <meta name="description" content="Things I’ve built." />
       </Head>
       <SimpleLayout
-        title="Things I’ve made trying to put my dent in the universe."
-        intro="I’ve worked on tons of little projects over the years but these are the ones that I’m most proud of. Many of them are open-source, so if you see something that piques your interest, check out the code and contribute if you have ideas for how it can be improved."
+        title="Things I’ve built."
+        intro="My tech stack includes React, Node, Typescript, C#, .NET, GraphQL, NextJS, RedwoodJS, and SQL."
       >
         <ul
           role="list"
