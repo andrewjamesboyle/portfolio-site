@@ -23,36 +23,35 @@ import { getAllArticles } from '@/lib/getAllArticles'
 const projects = [
   {
     name: 'Collabo',
-    description: 'GitHub for musicians.',
+    description: 'GitHub for musicians. Built with HTML, CSS, and vanilla JS.',
     link: { href: 'http://collabomusic.co', label: 'collabomusic.co' },
     logo: logoPlanetaria,
   },
   {
-    name: 'Animaginary',
+    name: 'BikeBuddy',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
+      'A ChatGPT powered digital marketing assistant trained specifically on the mountain biking industry. Built for Mountain View Cycles as a marketing automation tool. Built with React, Node, GraphQL, and RedwoodJS.',
+    link: {
+      href: 'https://github.com/contentgpt/marketing-app-backend',
+      label: 'github.com',
+    },
     logo: logoPlanetaria,
   },
   {
-    name: 'HelioStream',
+    name: 'Gimbal Simulator',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
+      'A testing program built for Hood Tech Vision. The goal was to use Flight Simulator telemetry data to update the gimbal position at a rate of 33Hz. Built using C#, .NET, and WPF.',
+    link: { href: 'https://hoodtechvision.com/', label: 'hoodtechvision.com' },
     logo: logoPlanetaria,
   },
   {
-    name: 'cosmOS',
+    name: 'Tic Tac Toe AI',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
+      'A brief foray into adversarial search algorithm, minimax, which simulates intelligent play against the computer.',
+    link: {
+      href: 'https://github.com/andrewjamesboyle/tictactoe-ai',
+      label: 'github.com',
+    },
     logo: logoPlanetaria,
   },
 ]
@@ -218,7 +217,7 @@ function Resume() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Experience</span>
+        <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
@@ -268,12 +267,12 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image1, image2, image3, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
-              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl',
-              rotations[imageIndex % rotations.length]
+              'relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl'
+              // rotations[imageIndex % rotations.length]
             )}
           >
             <Image
@@ -289,7 +288,7 @@ function Photos() {
   )
 }
 
-export default function Home({ articles }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -334,13 +333,6 @@ export default function Home({ articles }) {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               Projects
             </h1>
-            {/* {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))} */}
-            {/* <ul
-              role="list"
-              className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-            > */}
             <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
               <div className="flex max-w-3xl flex-col space-y-16">
                 {projects.map((project) => (
@@ -369,9 +361,7 @@ export default function Home({ articles }) {
             </div>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Resume
-            </h1>
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"></h1>
             {/* <Newsletter />   */}
             <Resume />
           </div>
