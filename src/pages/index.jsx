@@ -7,15 +7,24 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
+import logoSyncline from '@/images/logos/syncline.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoCollabo from '@/images/photos/collabo.jpg'
+import logoMTVC from '@/images/photos/MTVC.jpg'
+import logoMinerva from '@/images/photos/minerva.jpg'
+import logoDrums from '@/images/photos/drums.jpg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
+import image16 from '@/images/photos/image-16.jpg'
+import image11 from '@/images/photos/image-11.jpg'
+import imageCoding from '@/images/photos/coding.jpg'
+import imageMDS from '@/images/photos/mds.jpg'
+import portrait from '@/images/portrait.jpg'
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
@@ -25,7 +34,7 @@ const projects = [
     name: 'Collabo',
     description: 'GitHub for musicians. Built with HTML, CSS, and vanilla JS.',
     link: { href: 'http://collabomusic.co', label: 'collabomusic.co' },
-    logo: logoPlanetaria,
+    logo: logoCollabo,
   },
   {
     name: 'BikeBuddy',
@@ -35,24 +44,24 @@ const projects = [
       href: 'https://github.com/contentgpt/marketing-app-backend',
       label: 'github.com',
     },
-    logo: logoPlanetaria,
+    logo: image16,
   },
   {
     name: 'Gimbal Simulator',
     description:
       'A testing program built for Hood Tech Vision. The goal was to use Flight Simulator telemetry data to update the gimbal position at a rate of 33Hz. Built using C#, .NET, and WPF.',
     link: { href: 'https://hoodtechvision.com/', label: 'hoodtechvision.com' },
-    logo: logoPlanetaria,
+    logo: imageMDS,
   },
   {
     name: 'Tic Tac Toe AI',
     description:
-      'A brief foray into adversarial search algorithm, minimax, which simulates intelligent play against the computer.',
+      'An exploration into adversarial search algorithm, minimax, which simulates intelligent play against the computer. Built with Python.',
     link: {
       href: 'https://github.com/andrewjamesboyle/tictactoe-ai',
       label: 'github.com',
     },
-    logo: logoPlanetaria,
+    logo: portrait,
   },
 ]
 
@@ -139,7 +148,7 @@ function Resume() {
     {
       company: 'Syncline Software Solutions, LLC',
       title: 'Software Engineer',
-      logo: logoPlanetaria,
+      logo: image16,
       start: '2023',
       end: {
         label: 'Present',
@@ -149,21 +158,21 @@ function Resume() {
     {
       company: 'Mountain View Cycles',
       title: 'Web Developer | Digital Marketer',
-      logo: logoAirbnb,
+      logo: logoMTVC,
       start: '2019',
       end: '2023',
     },
     {
       company: 'Minerva Consultation',
-      title: 'Web Developer | Web Analyst',
-      logo: logoFacebook,
+      title: 'Data Analyst',
+      logo: logoMinerva,
       start: '2020',
       end: '2022',
     },
     {
       company: 'Professional Musician',
       title: 'Drummer',
-      logo: logoStarbucks,
+      logo: logoDrums,
       start: '2012',
       end: '2020',
     },
@@ -179,7 +188,13 @@ function Resume() {
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+              <Image
+                src={role.logo}
+                alt=""
+                class="rounded-full"
+                className="h-7 w-7 rounded-full"
+                unoptimized
+              />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -209,8 +224,12 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
+      <Button
+        href="/resume.pdf"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
+        Download Resume
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -223,7 +242,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image5].map((image, imageIndex) => (
+        {[image4, image2, image3, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -297,7 +316,8 @@ export default function Home() {
                       <Image
                         src={project.logo}
                         alt=""
-                        className="h-8 w-8"
+                        class="rounded-full"
+                        className="h-8 w-8 rounded-full"
                         unoptimized
                       />
                     </div>

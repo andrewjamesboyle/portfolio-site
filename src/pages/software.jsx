@@ -3,18 +3,17 @@ import Image from 'next/image'
 
 import { Card } from '@/components/Card'
 import { SimpleLayout } from '@/components/SimpleLayout'
-import logoAnimaginary from '@/images/logos/animaginary.svg'
-import logoCosmos from '@/images/logos/cosmos.svg'
-import logoHelioStream from '@/images/logos/helio-stream.svg'
-import logoOpenShuttle from '@/images/logos/open-shuttle.svg'
-import logoPlanetaria from '@/images/logos/planetaria.svg'
+import logoCollabo from '@/images/photos/collabo.jpg'
+import image16 from '@/images/photos/image-16.jpg'
+import imageMDS from '@/images/photos/mds.jpg'
+import portrait from '@/images/portrait.jpg'
 
 const projects = [
   {
     name: 'Collabo',
     description: 'GitHub for musicians. Built with HTML, CSS, and vanilla JS.',
     link: { href: 'http://collabomusic.co', label: 'collabomusic.co' },
-    logo: logoPlanetaria,
+    logo: logoCollabo,
   },
   {
     name: 'BikeBuddy',
@@ -24,24 +23,24 @@ const projects = [
       href: 'https://github.com/contentgpt/marketing-app-backend',
       label: 'github.com',
     },
-    logo: logoPlanetaria,
+    logo: image16,
   },
   {
     name: 'Gimbal Simulator',
     description:
       'A testing program built for Hood Tech Vision. The goal was to use Flight Simulator telemetry data to update the gimbal position at a rate of 33Hz. Built using C#, .NET, and WPF.',
     link: { href: 'https://hoodtechvision.com/', label: 'hoodtechvision.com' },
-    logo: logoPlanetaria,
+    logo: imageMDS,
   },
   {
     name: 'Tic Tac Toe AI',
     description:
-      'A brief foray into adversarial search algorithm, minimax, which simulates intelligent play against the computer.',
+      'An exploration into adversarial search algorithm, minimax, which simulates intelligent play against the computer. Built with Python.',
     link: {
       href: 'https://github.com/andrewjamesboyle/tictactoe-ai',
       label: 'github.com',
     },
-    logo: logoPlanetaria,
+    logo: portrait,
   },
 ]
 
@@ -77,7 +76,8 @@ export default function Software() {
                 <Image
                   src={project.logo}
                   alt=""
-                  className="h-8 w-8"
+                  class="rounded-full"
+                  className="h-8 w-8 rounded-full"
                   unoptimized
                 />
               </div>
