@@ -7,15 +7,24 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import logoAirbnb from '@/images/logos/airbnb.svg'
+import logoSyncline from '@/images/logos/syncline.svg'
 import logoFacebook from '@/images/logos/facebook.svg'
 import logoPlanetaria from '@/images/logos/planetaria.svg'
 import logoStarbucks from '@/images/logos/starbucks.svg'
+import logoCollabo from '@/images/photos/collabo.jpg'
+import logoMTVC from '@/images/photos/MTVC.jpg'
+import logoMinerva from '@/images/photos/minerva.jpg'
+import logoDrums from '@/images/photos/drums.jpg'
 import image1 from '@/images/photos/image-1.jpg'
 import image2 from '@/images/photos/image-2.jpg'
 import image3 from '@/images/photos/image-3.jpg'
 import image4 from '@/images/photos/image-4.jpg'
 import image5 from '@/images/photos/image-5.jpg'
+import image16 from '@/images/photos/image-16.jpg'
+import image11 from '@/images/photos/image-11.jpg'
+import imageCoding from '@/images/photos/coding.jpg'
+import imageMDS from '@/images/photos/mds.jpg'
+import portrait from '@/images/portrait.jpg'
 import { formatDate } from '@/lib/formatDate'
 import { generateRssFeed } from '@/lib/generateRssFeed'
 import { getAllArticles } from '@/lib/getAllArticles'
@@ -23,37 +32,36 @@ import { getAllArticles } from '@/lib/getAllArticles'
 const projects = [
   {
     name: 'Collabo',
-    description: 'GitHub for musicians.',
+    description: 'GitHub for musicians. Built with HTML, CSS, and vanilla JS.',
     link: { href: 'http://collabomusic.co', label: 'collabomusic.co' },
-    logo: logoPlanetaria,
+    logo: logoCollabo,
   },
   {
-    name: 'Animaginary',
+    name: 'BikeBuddy',
     description:
-      'High performance web animation library, hand-written in optimized WASM.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoPlanetaria,
+      'A ChatGPT powered digital marketing assistant trained specifically on the mountain biking industry. Built for Mountain View Cycles as a marketing automation tool. Built with React, Node, GraphQL, and RedwoodJS.',
+    link: {
+      href: 'https://github.com/contentgpt/marketing-app-backend',
+      label: 'github.com',
+    },
+    logo: image16,
   },
   {
-    name: 'HelioStream',
+    name: 'Gimbal Simulator',
     description:
-      'Real-time video streaming library, optimized for interstellar transmission.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoPlanetaria,
+      'A testing program built for Hood Tech Vision. The goal was to use Flight Simulator telemetry data to update the gimbal position at a rate of 33Hz. Built using C#, .NET, and WPF.',
+    link: { href: 'https://hoodtechvision.com/', label: 'hoodtechvision.com' },
+    logo: imageMDS,
   },
   {
-    name: 'cosmOS',
+    name: 'Tic Tac Toe AI',
     description:
-      'The operating system that powers our Planetaria space shuttles.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoPlanetaria,
-  },
-  {
-    name: 'OpenShuttle',
-    description:
-      'The schematics for the first rocket I designed that successfully made it to orbit.',
-    link: { href: '#', label: 'github.com' },
-    logo: logoPlanetaria,
+      'An exploration into adversarial search algorithm, minimax, which simulates intelligent play against the computer. Built with Python.',
+    link: {
+      href: 'https://github.com/andrewjamesboyle/tictactoe-ai',
+      label: 'github.com',
+    },
+    logo: portrait,
   },
 ]
 
@@ -127,21 +135,6 @@ function ArrowDownIcon(props) {
   )
 }
 
-function Article({ article }) {
-  return (
-    <Card as="article">
-      <Card.Title href={`/articles/${article.slug}`}>
-        {article.title}
-      </Card.Title>
-      <Card.Eyebrow as="time" dateTime={article.date} decorate>
-        {formatDate(article.date)}
-      </Card.Eyebrow>
-      <Card.Description>{article.description}</Card.Description>
-      <Card.Cta>Read article</Card.Cta>
-    </Card>
-  )
-}
-
 function SocialLink({ icon: Icon, ...props }) {
   return (
     <Link className="group -m-1 p-1" {...props}>
@@ -150,41 +143,12 @@ function SocialLink({ icon: Icon, ...props }) {
   )
 }
 
-function Newsletter() {
-  return (
-    <form
-      action="/thank-you"
-      className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40"
-    >
-      <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
-        <MailIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Stay up to date</span>
-      </h2>
-      <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400">
-        Get notified when I publish something new, and unsubscribe at any time.
-      </p>
-      <div className="mt-6 flex">
-        <input
-          type="email"
-          placeholder="Email address"
-          aria-label="Email address"
-          required
-          className="min-w-0 flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-teal-500 focus:outline-none focus:ring-4 focus:ring-teal-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-teal-400 dark:focus:ring-teal-400/10 sm:text-sm"
-        />
-        <Button type="submit" className="ml-4 flex-none">
-          Join
-        </Button>
-      </div>
-    </form>
-  )
-}
-
 function Resume() {
   let resume = [
     {
       company: 'Syncline Software Solutions, LLC',
       title: 'Software Engineer',
-      logo: logoPlanetaria,
+      logo: image16,
       start: '2023',
       end: {
         label: 'Present',
@@ -194,21 +158,21 @@ function Resume() {
     {
       company: 'Mountain View Cycles',
       title: 'Web Developer | Digital Marketer',
-      logo: logoAirbnb,
+      logo: logoMTVC,
       start: '2019',
       end: '2023',
     },
     {
       company: 'Minerva Consultation',
-      title: 'Web Developer | Web Analyst',
-      logo: logoFacebook,
+      title: 'Data Analyst',
+      logo: logoMinerva,
       start: '2020',
       end: '2022',
     },
     {
       company: 'Professional Musician',
       title: 'Drummer',
-      logo: logoStarbucks,
+      logo: logoDrums,
       start: '2012',
       end: '2020',
     },
@@ -218,13 +182,19 @@ function Resume() {
     <div className="rounded-2xl border border-zinc-100 p-6 dark:border-zinc-700/40">
       <h2 className="flex text-sm font-semibold text-zinc-900 dark:text-zinc-100">
         <BriefcaseIcon className="h-6 w-6 flex-none" />
-        <span className="ml-3">Experience</span>
+        <span className="ml-3">Work</span>
       </h2>
       <ol className="mt-6 space-y-4">
         {resume.map((role, roleIndex) => (
           <li key={roleIndex} className="flex gap-4">
             <div className="relative mt-1 flex h-10 w-10 flex-none items-center justify-center rounded-full shadow-md shadow-zinc-800/5 ring-1 ring-zinc-900/5 dark:border dark:border-zinc-700/50 dark:bg-zinc-800 dark:ring-0">
-              <Image src={role.logo} alt="" className="h-7 w-7" unoptimized />
+              <Image
+                src={role.logo}
+                alt=""
+                class="rounded-full"
+                className="h-7 w-7 rounded-full"
+                unoptimized
+              />
             </div>
             <dl className="flex flex-auto flex-wrap gap-x-2">
               <dt className="sr-only">Company</dt>
@@ -254,8 +224,12 @@ function Resume() {
           </li>
         ))}
       </ol>
-      <Button href="#" variant="secondary" className="group mt-6 w-full">
-        Download CV
+      <Button
+        href="/resume.pdf"
+        variant="secondary"
+        className="group mt-6 w-full"
+      >
+        Download Resume
         <ArrowDownIcon className="h-4 w-4 stroke-zinc-400 transition group-active:stroke-zinc-600 dark:group-hover:stroke-zinc-50 dark:group-active:stroke-zinc-50" />
       </Button>
     </div>
@@ -268,7 +242,7 @@ function Photos() {
   return (
     <div className="mt-16 sm:mt-20">
       <div className="-my-4 flex justify-center gap-5 overflow-hidden py-4 sm:gap-8">
-        {[image1, image2, image3, image4, image5].map((image, imageIndex) => (
+        {[image4, image2, image3, image5].map((image, imageIndex) => (
           <div
             key={image.src}
             className={clsx(
@@ -289,7 +263,7 @@ function Photos() {
   )
 }
 
-export default function Home({ articles }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -315,12 +289,12 @@ export default function Home({ articles }) {
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
-              href="https://github.com"
+              href="https://github.com/andrewjamesboyle"
               aria-label="Follow on GitHub"
               icon={GitHubIcon}
             />
             <SocialLink
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/andrewjamesboyle/"
               aria-label="Follow on LinkedIn"
               icon={LinkedInIcon}
             />
@@ -334,13 +308,6 @@ export default function Home({ articles }) {
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
               Projects
             </h1>
-            {/* {articles.map((article) => (
-              <Article key={article.slug} article={article} />
-            ))} */}
-            {/* <ul
-              role="list"
-              className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-            > */}
             <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
               <div className="flex max-w-3xl flex-col space-y-16">
                 {projects.map((project) => (
@@ -349,7 +316,8 @@ export default function Home({ articles }) {
                       <Image
                         src={project.logo}
                         alt=""
-                        className="h-8 w-8"
+                        class="rounded-full"
+                        className="h-8 w-8 rounded-full"
                         unoptimized
                       />
                     </div>
@@ -369,10 +337,7 @@ export default function Home({ articles }) {
             </div>
           </div>
           <div className="space-y-10 lg:pl-16 xl:pl-24">
-            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Resume
-            </h1>
-            {/* <Newsletter />   */}
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl"></h1>
             <Resume />
           </div>
         </div>

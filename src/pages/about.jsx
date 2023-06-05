@@ -56,14 +56,14 @@ export default function About() {
           </div>
           <div className="lg:order-first lg:row-span-2">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              I ride bikes, I play the drums, and I develop software.
+              I ride bikes. I play drums. I build things.
             </h1>
             <div className="mt-6 space-y-7 text-base text-zinc-600 dark:text-zinc-400">
               <p>
                 I’ve always loved building things. When I was a kid, I would
                 build elaborate systems of pillows and capsized laundry hampers
                 to play drums on. I would take my bike apart just to see if I
-                could put it back together. At first I couldn't, but eventually
+                could put it back together. At first I couldn’t, but eventually
                 I could.
               </p>
               <p>
