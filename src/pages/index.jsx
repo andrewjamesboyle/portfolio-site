@@ -156,7 +156,7 @@ function Resume() {
     },
     {
       company: 'Minerva Consultation',
-      title: 'Data Analyst',
+      title: 'Web Analyst',
       logo: logoMinerva,
       start: '2020',
       end: '2022',
