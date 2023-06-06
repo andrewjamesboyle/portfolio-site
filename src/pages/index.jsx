@@ -259,9 +259,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>
-          Andrew Boyle - Software Developer, Digital Marketer, Creative
-        </title>
+        <title>Andrew Boyle - Software Developer, Marketer, Creative</title>
         <meta
           name="description"
           content="I’m Andrew, a software developer and entrepreneur based in Hood River, Oregon. I’m the founder and CEO of Syncline Software Solutions, where we help small businesses leverage generative AI tools to streamline their marketing."
