@@ -18,8 +18,6 @@ import image5 from '@/images/photos/image-5.jpg'
 import image16 from '@/images/photos/image-16.jpg'
 import imageMDS from '@/images/photos/mds.jpg'
 import portrait from '@/images/portrait.jpg'
-import { generateRssFeed } from '@/lib/generateRssFeed'
-import { getAllArticles } from '@/lib/getAllArticles'
 
 const projects = [
   {
@@ -272,7 +270,7 @@ export default function Home() {
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             I’m Andrew, a software developer, musician, photographer, and
-            entrepreneur based in Hood River, Oregon. I’m the founder and CEO of
+            entrepreneur based in Hood River, Oregon. I’m the founder of
             Syncline Software Solutions, where we develop solutions leveraging
             generative AI and web analytics to empower small business owners to
             streamline, automate, and maximize their marketing results.
@@ -334,18 +332,4 @@ export default function Home() {
       </Container>
     </>
   )
-}
-
-export async function getStaticProps() {
-  if (process.env.NODE_ENV === 'production') {
-    await generateRssFeed()
-  }
-
-  return {
-    props: {
-      articles: (await getAllArticles())
-        .slice(0, 4)
-        .map(({ component, ...meta }) => meta),
-    },
-  }
 }
