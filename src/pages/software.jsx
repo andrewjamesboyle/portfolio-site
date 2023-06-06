@@ -27,7 +27,8 @@ const projects = [
   },
   {
     name: 'Gimbal Simulator',
-    description: 'A testing program built for Hood Tech Vision.',
+    description:
+      'A testing program built for Hood Tech Vision. Built with C#, .NET, and WPF',
     link: { href: 'https://hoodtechvision.com/', label: 'hoodtechvision.com' },
     logo: imageMDS,
   },
