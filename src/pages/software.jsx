@@ -27,8 +27,7 @@ const projects = [
   },
   {
     name: 'Gimbal Simulator',
-    description:
-      'A testing program built for Hood Tech Vision. The goal was to use Flight Simulator telemetry data to update the gimbal position at a rate of 33Hz. Built using C#, .NET, and WPF.',
+    description: 'A testing program built for Hood Tech Vision.',
     link: { href: 'https://hoodtechvision.com/', label: 'hoodtechvision.com' },
     logo: imageMDS,
   },
