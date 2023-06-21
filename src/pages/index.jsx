@@ -139,7 +139,7 @@ function Resume() {
       company: 'Syncline Software Solutions, LLC',
       title: 'Software Engineer',
       logo: image16,
-      start: '2023',
+      start: '2020',
       end: {
         label: 'Present',
         dateTime: new Date().getFullYear(),
@@ -150,7 +150,7 @@ function Resume() {
       title: 'Web Developer | Digital Marketer',
       logo: logoMTVC,
       start: '2019',
-      end: '2023',
+      end: '2022',
     },
     {
       company: 'Minerva Consultation',
