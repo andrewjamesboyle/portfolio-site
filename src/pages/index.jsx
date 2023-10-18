@@ -7,7 +7,7 @@ import { Button } from '@/components/Button'
 import { Card } from '@/components/Card'
 import { Container } from '@/components/Container'
 import { GitHubIcon, LinkedInIcon } from '@/components/SocialIcons'
-import logoCollabo from '@/images/photos/collabo.jpg'
+import logoCRM from '@/images/photos/proinsight.jpg'
 import logoMTVC from '@/images/photos/MTVC.jpg'
 import logoMinerva from '@/images/photos/minerva.jpg'
 import logoDrums from '@/images/photos/drums.jpg'
@@ -18,41 +18,49 @@ import image5 from '@/images/photos/image-5.jpg'
 import image16 from '@/images/photos/image-16.jpg'
 import imageMDS from '@/images/photos/mds.jpg'
 import portrait from '@/images/portrait.jpg'
+import thedeemill from '@/images/photos/thedeemill.jpg'
+import outpost from '@/images/photos/outpost.jpg'
 
 const projects = [
   {
-    name: 'Collabo',
-    description: 'GitHub for musicians. Built with HTML, CSS, and vanilla JS.',
-    link: { href: 'http://collabomusic.co', label: 'collabomusic.co' },
-    logo: logoCollabo,
-  },
-  {
-    name: 'BikeBuddy',
+    name: 'Pro Insight CRM',
     description:
-      'A ChatGPT powered digital marketing assistant trained specifically on the mountain biking industry. Built for Mountain View Cycles as a marketing automation tool. Built with React, Node, GraphQL, and RedwoodJS.',
+      'A backend application for managing customer relationships in the Real Estate industry. Built with Nest JS. Deployed with AWS.',
     link: {
-      href: 'https://github.com/contentgpt/marketing-app-backend',
+      href: 'https://github.com/andrewjamesboyle/ProInsight-CRM',
       label: 'github.com',
     },
-    logo: image16,
+    logo: logoCRM,
   },
   {
-    name: 'Gimbal Simulator',
-    description:
-      'A testing program built for Hood Tech Vision. Built with C#, .NET, and WPF',
-    link: { href: 'https://hoodtechvision.com/', label: 'hoodtechvision.com' },
-    logo: imageMDS,
-  },
-  {
-    name: 'Tic Tac Toe AI',
-    description:
-      'An exploration into adversarial search algorithm, minimax, which simulates intelligent play against the computer. Built with Python.',
+    name: 'The Dee Mill',
+    description: 'E-Commerce site for a local business.',
     link: {
-      href: 'https://github.com/andrewjamesboyle/tictactoe-ai',
+      href: 'https://thedeemill.com/',
+      label: 'thedeemill.com',
+    },
+    logo: thedeemill,
+  },
+  {
+    name: 'Outpost HR',
+    description:
+      'An application for managing bookings and door access to a coworking space in Hood River, Oregon.',
+    link: {
+      href: 'https://github.com/andrewjamesboyle/outpost-bookings',
       label: 'github.com',
     },
-    logo: portrait,
+    logo: outpost,
   },
+  // {
+  //   name: 'Tic Tac Toe AI',
+  //   description:
+  //     'An exploration into adversarial search algorithm, minimax, which simulates intelligent play against the computer. Built with Python.',
+  //   link: {
+  //     href: 'https://github.com/andrewjamesboyle/tictactoe-ai',
+  //     label: 'github.com',
+  //   },
+  //   logo: portrait,
+  // },
 ]
 
 function LinkIcon(props) {
@@ -137,7 +145,7 @@ function Resume() {
   let resume = [
     {
       company: 'Syncline Software Solutions, LLC',
-      title: 'Software Engineer',
+      title: 'Software Engineer | Founder',
       logo: image16,
       start: '2020',
       end: {
@@ -152,13 +160,13 @@ function Resume() {
       start: '2019',
       end: '2022',
     },
-    {
-      company: 'Minerva Consultation',
-      title: 'Web Analyst',
-      logo: logoMinerva,
-      start: '2020',
-      end: '2022',
-    },
+    // {
+    //   company: 'Minerva Consultation',
+    //   title: 'Web Analyst',
+    //   logo: logoMinerva,
+    //   start: '2020',
+    //   end: '2022',
+    // },
     {
       company: 'Professional Musician',
       title: 'Drummer',
@@ -266,14 +274,14 @@ export default function Home() {
       <Container className="mt-9">
         <div className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-            Developer | Marketer | Creative
+            Full Stack Creative
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-            I’m Andrew, a software developer, musician, photographer, and
-            entrepreneur based in Hood River, Oregon. I’m the founder of
-            Syncline Software Solutions, where we develop solutions leveraging
-            generative AI and web analytics to empower small business owners to
-            streamline, automate, and maximize their marketing results.
+            I’m Andrew, a software engineer, marketer, musician, photographer,
+            and entrepreneur based in Hood River, Oregon. I’m the founder of
+            Syncline Software Solutions, where we work with small business
+            owners across a range of industry to develop creative and technical
+            solutions.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
@@ -294,7 +302,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-xl grid-cols-1 gap-y-20 lg:max-w-none lg:grid-cols-2">
           <div className="flex flex-col gap-16">
             <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-              Projects
+              Portfolio
             </h1>
             <div className="md:border-l md:border-zinc-100 md:pl-6 md:dark:border-zinc-700/40">
               <div className="flex max-w-3xl flex-col space-y-16">
