@@ -280,8 +280,8 @@ export default function Home() {
             I’m Andrew, a software engineer, marketer, musician, photographer,
             and entrepreneur based in Hood River, Oregon. I’m the founder of
             Syncline Software Solutions, where we work with small business
-            owners across a range of industry to develop creative and technical
-            solutions.
+            owners across a range of industries to develop creative and
+            technical solutions, tailored to their unique needs.
           </p>
           <div className="mt-6 flex gap-6">
             <SocialLink
